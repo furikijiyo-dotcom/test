@@ -1,25 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-  /* Change the entire icon */
-  .my-icon {
-    fill: #ff5733;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+  .meun{
+    margin: 50px;
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+  }
+  .meun > li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  /* Target a specific path inside the SVG */
-  .my-icon .inner-path {
-    fill: #00ff00;
+    cursor: pointer;
+    width: 200px;
+    padding: 10px;
+    position: relative;
+    background-color: rgb(1, 176, 189);
+  }
+  /* icon */
+  .meun > li > i{
+    color: white;
+    font-size: 20px;
+    transition: all 3s ease-in-out;
+  }
+  .meun > li:hover > i{
+    transition: all 3s ease-in-out;
+    transform: rotate(180deg);
+  }
+  .meun > li > a , .meun > li > .dorpdown > li > a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .meun > li > .dorpdown{
+    /* option1 */
+    /* display-none */
+
+    /* option2 */
+    height: 0px;
+    overflow: hidden;
+    /* wigth100% */
+    transition: all 3s ease-in-out;
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    list-style-type: none;
+    border-top: 2px solid white;
+    background-color: rgb(1, 159, 171);
+  }
+  /* showdropdown */
+  .meun > li:hover > .dorpdown{
+    /* option1 */
+    /* display: block; */
+    /* option2 */
+    height: 175px;
+    transition: all 3s ease-in-out;
+  }
+  .meun > li > .dorpdown > li{
+    padding: 10px;
+    transition: all 3s ease-in-out;
+  }
+  .meun > li > .dorpdown > li:hover{
+    transition: all 3s ease-in-out;
+    background-color: rgba(2, 197, 211, 0.646);
   }
 </style>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-  <svg class="my-icon" viewBox="0 0 100 100">
-  <path class="inner-path" d="M10 10 H 90 V 90 H 10 Z" />
-</svg>
+  <ul class="meun">
+    <li>
+      <a href="">Dropdown</a>
+      <i class="fa-solid fa-angle-down"></i>
+
+      <ul class="dorpdown">
+        <li><a href="">Facebook</a></li>
+        <li><a href="">TikTok</a></li>
+        <li><a href="">Telegram</a></li>
+        <li><a href="">Instargram</a></li>
+      </ul>
+    </li>
+  </ul>
 </body>
 </html>

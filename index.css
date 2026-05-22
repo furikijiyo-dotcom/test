@@ -28,7 +28,6 @@ header .meun-up{
     background-color: white;  
     position: sticky;
     top: 0;
-    box-shadow: black 0px 25px 20px -20px;
 }
 
 /* Logo */
@@ -125,7 +124,7 @@ header .meun-up{
 /* drop-down */
 /* li2 */
 .ul1 > .li2 > .icon-arrup{
-    color: white;
+    color: black;
     font-size: 15px;
     transition: all 0.5s ease-in-out;
 }
@@ -237,18 +236,23 @@ header .menu-down{
     align-items: center;
     position: sticky;
     top: 15%;
+    border-bottom:1px solid gold;
 }
 .menu-down .meun2{
+    width: 100%;
+    height: 100%;
     font-size: 15px;
     color: white;
-    padding: 0px 695px 0px 0px;
 }
 .meun2 .ul2{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:35px;
+    gap:35px;;
+    padding: 0px 695px 0px 0px;
 }
 .ul2 .l1{
     display: flex;
@@ -490,7 +494,7 @@ header .big-img{
 header .itme{
     width: 100%;
     height: 20%;
-    background-color: #1b3351;
+    background-color: #0c245f;
     display: flex;
     justify-content: center;
     align-items: center;
